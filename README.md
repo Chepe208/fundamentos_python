@@ -604,3 +604,125 @@ print((7 - 2) * 5 + 3 ** 2)
 ```python
 print(4 * 2 ** 3 / 8 + 1)
 ```
+# Sección 4 – Variables
+
+## Laboratorio: Variables (las manzanas de Juan, María y Adán)
+
+- Juan tenía **3** manzanas.
+- María tenía **5** manzanas.
+- Adán tenía **6** manzanas.
+
+Se deben crear variables, asignar los valores, imprimirlos, sumarlos y mostrar el total.
+
+#### Código solución
+
+```python
+# Asignar valores
+
+john = 3
+mary = 5
+adam = 6
+
+# Imprimir las variables separadas por comas
+print(john, mary, adam, sep=",")
+
+# Sumar todas las manzanas
+total_apples = john + mary + adam
+
+# Imprimir el total
+print(total_apples)
+```
+
+## Explicación paso a paso
+**Crear las variables**
+
+john = 3 → se crea la variable john y se guarda el número 3.
+Lo mismo para mary y adam.
+
+**Imprimir las tres variables en una línea, separadas por comas**
+
+print(john, mary, adam, sep=",")
+
+sep="," hace que entre cada valor se ponga una coma, sin espacios.
+
+La salida será: 3,5,6
+
+**Sumar los valores**
+
+total_apples = john + mary + adam
+
+Se calcula 3 + 5 + 6 = 14 y se guarda en total_apples.
+
+**Imprimir el total**
+
+print(total_apples) lo que muestra 14.
+
+**Salida esperada**
+
+3,5,6
+14
+
+## Experimentos adicionales
+
+**Mostrar el total con un mensaje:**
+
+```python
+john = 3
+mary = 5
+adam = 6
+
+print(john, mary, adam, sep=",")
+
+total_apples = john + mary + adam
+
+print("Número total de manzanas:", total_apples)
+```
+
+Salida: Número total de manzanas: 14
+
+### Nuevas variables
+
+```python
+naranjas = 10
+peras = 7
+frutas_total = naranjas + peras
+```
+
+### Operaciones aritméticas
+
+```python
+suma = john + naranjas
+resta = mary - adam
+multiplicacion = peras * 2
+division = total_apples / 3
+division_entera = total_apples // 3
+modulo = total_apples % 3
+```
+
+### Mostrar resultados
+
+```python
+print("Suma de john + naranjas:", suma)
+print("Resta de mary - adam:", resta)
+print("Multiplicación peras * 2:", multiplicacion)
+print("División total_apples / 3:", division)
+print("División entera total_apples // 3:", division_entera)
+print("Residuo total_apples % 3:", modulo)
+```
+
+### Cadena con entero en la misma línea
+
+```python
+print("Número total de manzanas:", total_apples)
+print("Total de frutas: " + str(frutas_total))
+```
+
+### Salida de los experimentos:
+Suma de john + naranjas: 13
+Resta de mary - adam: -1
+Multiplicación peras * 2: 14
+División total_apples / 3: 4.666666666666667
+División entera total_apples // 3: 4
+Residuo total_apples % 3: 2
+Número total de manzanas: 14
+Total de frutas: 17
