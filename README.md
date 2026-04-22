@@ -285,3 +285,322 @@ Cuando se quiere una comilla doble visible en la salida, escribimos \".
 Las comillas que pide la salida:
 
 Una al inicio: \", luego Estoy, tres comillas seguidas: \"\"\", luego aprendiendo, cinco comillas seguidas: \"\"\"\"\", luego Python, tres comillas al final: \"\"\"
+
+# Sección 3 - Operadores: herramientas de manipulación de datos
+
+### Ejercicio 1
+
+**Expresión:**  
+`5 + 3 * 2`
+
+**Pregunta:** ¿Cuál es el resultado? ¿Por qué?
+
+**Solución paso a paso:**
+
+1. La multiplicación (*) tiene mayor prioridad que la suma (+).
+2. Primero se calcula `3 * 2 = 6`.
+3. Luego se suma `5 + 6 = 11`.
+
+**Resultado:** `11`
+
+**Comprobación en Python:**
+
+```python
+print(5 + 3 * 2)
+```
+
+## Ejercicio 2
+
+**Expresión:**
+`8 / 2 + 4 * 3`
+
+**Pregunta:** ¿Cuál es el resultado? ¿Por qué?
+
+**Solución paso a paso:**
+
+1. La división (/) y la multiplicación (*) tienen la misma prioridad y se evalúan de izquierda a derecha.
+2. Primero 8 / 2 = 4.0.
+3. Luego 4 * 3 = 12.
+4. Finalmente 4.0 + 12 = 16.0.
+
+**Resultado:** 16.0
+
+**Comprobación en Python:**
+
+```python
+print(8 / 2 + 4 * 3)
+```
+
+## Ejercicio 3
+
+**Expresión:**
+`(7 + 3) * 2 - 5`
+
+**Pregunta:** ¿Cuál es el resultado? ¿Por qué?
+
+**Solución paso a paso:**
+
+1. Los paréntesis tienen la máxima prioridad. Primero (7 + 3) = 10.
+2. Luego la multiplicación: 10 * 2 = 20.
+3. Finalmente la resta: 20 - 5 = 15.
+
+**Resultado:** 15
+
+**Comprobación en Python:**
+
+```python
+print((7 + 3) * 2 - 5)
+```
+
+## Ejercicio 4
+
+**Expresión:**
+`10 - 4 + 2 * 3`
+
+**Pregunta:** ¿Cuál es el resultado? ¿Por qué?
+
+**Solución paso a paso:**
+
+1. La multiplicación tiene prioridad: 2 * 3 = 6.
+2. Luego 10 - 4 = 6.
+3. Luego 6 + 6 = 12.
+
+**Resultado:** 12
+
+**Comprobación en Python:**
+
+```python
+print(10 - 4 + 2 * 3)
+```
+
+## Ejercicio 5
+
+**Expresión:**
+`(10 / 2) * (3 + 2) - 4`
+
+**Pregunta:** ¿Cuál es el resultado? ¿Por qué?
+
+**Solución paso a paso:**
+
+1. Paréntesis: 10 / 2 = 5.0 y 3 + 2 = 5.
+2. Multiplicación: 5.0 * 5 = 25.0.
+3. Resta: 25.0 - 4 = 21.0.
+
+**Resultado:** 21.0
+
+**Comprobación en Python:**
+
+```python
+print((10 / 2) * (3 + 2) - 4)
+```
+
+## Ejercicio 6
+
+**Expresión:**
+2 + 3 * (4 - 1)
+
+**Pregunta:** ¿Cuál es el resultado? ¿Por qué?
+
+**Solución paso a paso:**
+
+1. Paréntesis: 4 - 1 = 3.
+2. Multiplicación: 3 * 3 = 9.
+3. Suma: 2 + 9 = 11.
+
+**Resultado:** 11
+
+**Comprobación en Python:**
+
+```python
+print(2 + 3 * (4 - 1))
+```
+
+## Ejercicio 7
+
+**Expresión:**
+5 * 2 ** 3
+
+**Pregunta:** ¿Cuál es el resultado? ¿Por qué?
+
+**Solución paso a paso:**
+
+1. Exponenciación primero: 2 ** 3 = 8.
+2. Multiplicación: 5 * 8 = 40.
+
+**Resultado:** 40
+
+**Comprobación en Python:**
+```python
+print(5 * 2 ** 3)
+```
+
+## Ejercicio 8
+
+**Expresión:**
+6 + 4 / 2 ** 2
+
+**Pregunta:** ¿Cuál es el resultado? ¿Por qué?
+
+**Solución paso a paso:**
+
+1. Exponenciación: 2 ** 2 = 4.
+2. División: 4 / 4 = 1.0.
+3. Suma: 6 + 1.0 = 7.0.
+
+**Resultado:** 7.0
+
+**Comprobación en Python:**
+
+```python
+print(6 + 4 / 2 ** 2)
+```
+
+## Ejercicio 9
+
+**Expresión:**
+10 % 3 + 2 * 5
+
+**Pregunta:** ¿Cuál es el resultado? ¿Por qué?
+
+**Solución paso a paso:**
+
+1. 10 % 3 = 1.
+2. 2 * 5 = 10.
+3. Suma: 1 + 10 = 11.
+
+**Resultado:** 11
+
+**Comprobación en Python:**
+
+```python
+print(10 % 3 + 2 * 5)
+```
+
+## Ejercicio 10
+
+**Expresión:**
+(8 + 2) * 3 ** 2
+
+**Pregunta:** ¿Cuál es el resultado? ¿Por qué?
+
+**Solución paso a paso:**
+
+1. Paréntesis: 8 + 2 = 10.
+2. Exponenciación: 3 ** 2 = 9.
+3. Multiplicación: 10 * 9 = 90.
+
+**Resultado:** 90
+
+**Comprobación en Python:**
+
+```python
+print((8 + 2) * 3 ** 2)
+```
+
+## Ejercicio 11
+
+**Expresión:**
+7 + 2 * (3 + 5) / 4
+
+**Pregunta:** ¿Cuál es el resultado? ¿Por qué?
+
+**Solución paso a paso:**
+
+1. Paréntesis: 3 + 5 = 8.
+2. Multiplicación: 2 * 8 = 16.
+3. División: 16 / 4 = 4.0.
+4. Suma: 7 + 4.0 = 11.0.
+
+**Resultado:** 11.0
+
+**Comprobación en Python:**
+
+```python
+print(7 + 2 * (3 + 5) / 4)
+```
+
+## Ejercicio 12
+
+**Expresión:**
+2 ** 3 * 4 / 2
+
+**Pregunta:** ¿Cuál es el resultado? ¿Por qué?
+
+**Solución paso a paso:**
+
+1. Exponenciación: 2 ** 3 = 8.
+2. Multiplicación: 8 * 4 = 32.
+3. División: 32 / 2 = 16.0.
+
+**Resultado:** 16.0
+
+**Comprobación en Python:**
+
+```python
+print(2 ** 3 * 4 / 2)
+```
+
+## Ejercicio 13
+
+**Expresión:**
+9 - 6 + 3 ** 2
+
+**Pregunta:** ¿Cuál es el resultado? ¿Por qué?
+
+**Solución paso a paso:**
+
+1. Exponenciación: 3 ** 2 = 9.
+2. 9 - 6 = 3.
+3. 3 + 9 = 12.
+
+**Resultado:** 12
+
+**Comprobación en Python:**
+
+```python
+print(9 - 6 + 3 ** 2)
+```
+
+## Ejercicio 14
+
+**Expresión:**
+(7 - 2) * 5 + 3 ** 2
+
+**Pregunta:** ¿Cuál es el resultado? ¿Por qué?
+
+**Solución paso a paso:**
+
+1. Paréntesis: 7 - 2 = 5.
+2. Exponenciación: 3 ** 2 = 9.
+3. Multiplicación: 5 * 5 = 25.
+4. Suma: 25 + 9 = 34.
+
+**Resultado:** 34
+
+**Comprobación en Python:**
+
+```python
+print((7 - 2) * 5 + 3 ** 2)
+```
+
+## Ejercicio 15
+
+**Expresión:**
+4 * 2 ** 3 / 8 + 1
+
+**Pregunta:** ¿Cuál es el resultado? ¿Por qué?
+
+**Solución paso a paso:**
+
+1. Exponenciación: 2 ** 3 = 8.
+2. Multiplicación: 4 * 8 = 32.
+3. División: 32 / 8 = 4.0.
+4. Suma: 4.0 + 1 = 5.0.
+
+**Resultado:** 5.0
+
+**Comprobación en Python:**
+
+```python
+print(4 * 2 ** 3 / 8 + 1)
+```
