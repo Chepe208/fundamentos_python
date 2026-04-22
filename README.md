@@ -726,3 +726,125 @@ División entera total_apples // 3: 4
 Residuo total_apples % 3: 2
 Número total de manzanas: 14
 Total de frutas: 17
+
+## Laboratorio: Variables – un convertidor simple (millas a kilómetros)
+
+Se debe completar un programa que convierta:
+- Millas a kilómetros (1 milla = 1.61 km)
+- Kilómetros a millas
+
+### Código solución
+
+```python
+kilometers = 12.25
+miles = 7.38
+```
+
+### Conversiones
+
+```python
+miles_to_kilometers = miles * 1.61
+kilometers_to_miles = kilometers / 1.61
+```
+
+### Salida con round() para redondear a 2 decimales
+
+```python
+print(miles, "millas son", round(miles_to_kilometers, 2), "kilómetros")
+print(kilometers, "kilómetros son", round(kilometers_to_miles, 2), "millas")
+```
+
+## Explicación paso a paso
+**Convertir millas a kilómetros**
+
+miles_to_kilometers = miles * 1.61
+
+Multiplicamos 7.38 × 1.61 = 11.8818.
+Luego round(..., 2) lo deja en 11.88.
+
+**Convertir kilómetros a millas**
+
+kilometers_to_miles = kilometers / 1.61
+
+Dividimos 12.25 ÷ 1.61 ≈ 7.608...
+Redondeado a 2 decimales da 7.61.
+
+**Uso de round()**
+
+La función round(valor, decimales) redondea el número a la cantidad de decimales que se indique.
+
+Si no se pone el segundo argumento, redondea al entero más cercano.
+
+**Múltiples argumentos en print()**
+
+print(miles, "millas son", round(...), "kilómetros")
+
+La función print() acepta varios argumentos separados por coma y los muestra en una sola línea,
+añadiendo un espacio entre ellos automáticamente.
+
+### Experimentos adicionales
+
+#### Convertidor USD a EUR
+
+```python
+usd = 100
+tipo_cambio = 0.92
+eur = usd * tipo_cambio
+print(usd, "USD son", round(eur, 2), "EUR")
+```
+
+#### Convertidor Celsius a Fahrenheit
+
+```python
+celsius = 25
+fahrenheit = celsius * 9/5 + 32
+print(celsius, "°C son", round(fahrenheit, 1), "°F")
+```
+
+#### Probando round() sin decimales y con diferentes precisiones
+
+```python
+numero = 3.14159
+print("Original:", numero)
+print("Redondeado a 0 decimales:", round(numero))
+print("Redondeado a 2 decimales:", round(numero, 2))
+print("Redondeado a 3 decimales:", round(numero, 3))
+```
+
+#### Formas de combinar texto y números
+
+```python
+total_apples = 14
+print("Total de manzanas:", total_apples)
+print("Total: " + str(total_apples) + " manzanas")
+print(f"Tenemos {total_apples} manzanas")
+```  
+#### Explicación de cada experimento
+
+**Convertidor USD a EUR**
+
+Se multiplica la cantidad en USD por el tipo de cambio (0.92).
+
+round(eur, 2) redondea a 2 decimales porque el resultado puede tener muchos decimales.
+
+**Convertidor Celsius a Fahrenheit**
+
+Fórmula: °F = °C × 9/5 + 32.
+
+Se usa round(..., 1) para mostrar solo un decimal, suficiente para temperaturas.
+
+**Experimentos con round()**
+
+round(numero) sin segundo argumento redondea al entero más cercano (3).
+
+Con ,2 da dos decimales (3.14), con ,3 da tres decimales (3.142).
+
+Útil para controlar la precisión de los resultados.
+
+**Combinar cadenas y números**
+
+Coma en print(): añade espacio automático.
+
+Concatenación con +: requiere convertir el número a cadena con str().
+
+f-string (recomendado): se escribe f"texto {variable}", es más legible y moderno.
