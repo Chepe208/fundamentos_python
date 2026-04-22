@@ -848,3 +848,82 @@ Coma en print(): añade espacio automático.
 Concatenación con +: requiere convertir el número a cadena con str().
 
 f-string (recomendado): se escribe f"texto {variable}", es más legible y moderno.
+
+### Laboratorio: Operadores y expresiones
+
+#### Escenario
+
+Se debe evaluar la expresión:
+
+**3x³ - 2x² + 3x - 1**
+
+para un valor de `x` dado (tipo `float`). El resultado se asigna a la variable `y` y se imprime.
+
+#### Código solución
+
+Archivo: `seccion4/expresion.py`
+
+
+# Datos de prueba (puedes cambiar los valores)
+
+```python
+x = 0
+x = 1
+x = -1
+```
+
+x = float(x)   # Convertimos a flotante
+
+# Expresión: 3*x^3 - 2*x^2 + 3*x - 1
+
+```python
+y = 3 * x**3 - 2 * x**2 + 3 * x - 1
+
+print("y =", y)
+```
+
+## Explicación paso a paso
+**Conversión a float**
+`x = float(x)`
+
+Asegura que aunque ingresemos un entero, se trate como número decimal.
+Esto evita problemas con la división o resultados inesperados.
+
+**Uso del operador de exponenciación (**)**
+
+`x**3` calcula x al cubo.
+
+`x**2` calcula x al cuadrado.
+
+**Multiplicación explícita**
+
+En álgebra se escribe 3x³, pero en Python hay que poner el *:
+`3 * x**3`
+
+**Orden de las operaciones**
+
+Primero exponenciación (**),
+luego multiplicación/división (*, /),
+y al final suma/resta (+, -).
+
+No se necesita paréntesis adicionales.
+
+**Asignación a y**
+
+El resultado de toda la expresión se guarda en la variable y.
+
+**Impresión**
+
+```python
+print("y =", y)
+```
+
+Muestra el resultado con un mensaje.
+
+**Probando con diferentes valores**
+
+Descomenta una línea de x y comenta las otras para probar:
+
+x = 0  → y = -1.0
+x = 1  → y = 3.0
+x = -1 → y = -9.0
