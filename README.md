@@ -85,9 +85,9 @@ Define el texto que se pone al final de todo lo que imprime print(), justo antes
 end="\n" esto lo que hace es un salto de línea.
 En el codigo seria: end="..." hace que después de "in" se agreguen tres puntos, pero sin saltar de línea.
 
-### Laboratorio 3: Dando formato a la salida
+## Laboratorio 3: Dando formato a la salida
 
-#### Código original
+### Código original
 El programa dibuja una flecha con asteriscos:
 
 ```python
@@ -114,16 +114,16 @@ Si se ejecuta mostraria una flecha apuntando hacia arriba:
   *****
 ```
 
-#### Cambios del codigo
+### Cambios del codigo
 
-##### Minimizar el número de print() usando \n
+#### Minimizar el número de print() usando \n
 En lugar de usar 8 print(), se puede usar uno solo insertando saltos de línea \n dentro de la cadena, el resultado es el mismo, mostrando la flecha hacia arriba usando este codigo:
 
 ```python
 print("    *\n   * *\n  *   *\n *     *\n***   ***\n  *   *\n  *   *\n  *****")
 ```
 
-##### Hacer la flecha el doble de grande
+#### Hacer la flecha el doble de grande
 Para agrandar la flecha, puedes duplicar cada línea pero con cuidado de que los espacios también se dupliquen. Una forma sencilla es multiplicar las cadenas:
 
 ```python
@@ -161,7 +161,7 @@ Salida de la cosola:
 
 Se duplicaron los espacios de la izquierda y también se duplicó el ancho de la flecha (más asteriscos en las líneas horizontales). La forma es la misma, pero ahora mide el doble en alto y ancho.
 
-##### Duplicar la flecha, colocando ambas una al lado de la otra
+#### Duplicar la flecha, colocando ambas una al lado de la otra
 
 ```python
 print("    *" * 2)
@@ -189,7 +189,7 @@ Salida de la consola:
   *****  *****
 ```
 
-##### Eliminar una comilla
+#### Eliminar una comilla
 
 ```python
   File "c:\SENA\fundamentos_python\src\seccion1\lab3.py", line 35
@@ -200,7 +200,7 @@ SyntaxError: unterminated string literal (detected at line 35)
 
 Falta la comilla de cierre. Python señala el error al final de la línea porque esperaba encontrar " pero la línea terminó. El error real está donde falta la comilla, pero Python lo detecta al llegar al final sin encontrarla.
 
-##### Eliminar un paréntesis
+#### Eliminar un paréntesis
 
 ```python
   File "c:\SENA\fundamentos_python\src\seccion1\lab3.py", line 39
@@ -211,7 +211,7 @@ SyntaxError: '(' was never closed
 
 Falta el paréntesis de cierre ). Python espero el paréntesis de cierre. El error está en la línea donde se abrio el paréntesis pero no se cerro.
 
-##### Cambiar print a Print
+#### Cambiar print a Print
 ```python
   File "c:\SENA\fundamentos_python\src\seccion1\lab3.py", line 44, in <module>
     Print("    *")
@@ -221,7 +221,7 @@ NameError: name 'Print' is not defined. Did you mean: 'print'?
 
 Python distingue mayúsculas de minúsculas. La función correcta se escribe print todo en minúsculas. Al escribir Print, Python lo que hace es buscar una función o variable con ese nombre, no la encuentra y lanza el error.
 
-##### Reemplazar comillas dobles por apóstrofes
+#### Reemplazar comillas dobles por apóstrofes
 
 ```python
 print('    *')
@@ -236,7 +236,7 @@ print("  *****")
 
 Las comillas simples ' y las comillas dobles " son equivalentes en Python para crear cadenas. El cambio no produce error, siempre que abras y cierres con el mismo tipo.
 
-##### Codigo incorrecto
+#### Codigo incorrecto
 
 ```python
 print("    *')
@@ -259,3 +259,29 @@ SyntaxError: unterminated string literal (detected at line 53)
 ```
 
 Si se abre con " se tiene que cerrar con ". Mezclar los dos tipos hace que Python reconozca dónde termina la cadena.
+
+# Sección 2 – Literales de Python
+
+## Laboratorio: Literales de Python – Cadenas
+
+Escribe un **solo** `print()` que produzca exactamente esta salida: 
+
+```python
+"Estoy"""aprendiendo"""""Python"""
+```
+
+### Solución
+
+```python
+print("\"Estoy\"\"\"aprendiendo\"\"\"\"\"Python\"\"\"")
+```
+
+Para que Python muestre una comilla doble dentro de una cadena, hay que escaparla con la diagonal invertida \".
+
+La cadena completa empieza y termina con ". Todo lo que está dentro se interpreta como texto.
+
+Cuando se quiere una comilla doble visible en la salida, escribimos \".
+
+Las comillas que pide la salida:
+
+Una al inicio: \", luego Estoy, tres comillas seguidas: \"\"\", luego aprendiendo, cinco comillas seguidas: \"\"\"\"\", luego Python, tres comillas al final: \"\"\"
