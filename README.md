@@ -90,6 +90,7 @@ En el codigo seria: end="..." hace que después de "in" se agreguen tres puntos,
 #### Código original
 El programa dibuja una flecha con asteriscos:
 
+```python
 print("    *")
 print("   * *")
 print("  *   *")
@@ -98,9 +99,11 @@ print("***   ***")
 print("  *   *")
 print("  *   *")
 print("  *****")
+```
 
 Si se ejecuta mostraria una flecha apuntando hacia arriba:
 
+```python
     *
    * *
   *   *
@@ -109,17 +112,21 @@ Si se ejecuta mostraria una flecha apuntando hacia arriba:
   *   *
   *   *
   *****
+```
 
 #### Cambios del codigo
 
 ##### Minimizar el número de print() usando \n
 En lugar de usar 8 print(), se puede usar uno solo insertando saltos de línea \n dentro de la cadena, el resultado es el mismo, mostrando la flecha hacia arriba usando este codigo:
 
+```python
 print("    *\n   * *\n  *   *\n *     *\n***   ***\n  *   *\n  *   *\n  *****")
+```
 
 ##### Hacer la flecha el doble de grande
 Para agrandar la flecha, puedes duplicar cada línea pero con cuidado de que los espacios también se dupliquen. Una forma sencilla es multiplicar las cadenas:
 
+```python
 print("        *")
 print("       * *")
 print("      *   *")
@@ -133,9 +140,10 @@ print("  *           *")
 print("  *           *")
 print("  *           *")
 print("  ***********")
-
+```      
 Salida de la cosola:
 
+```python
         *
        * *
       *   *
@@ -149,10 +157,13 @@ Salida de la cosola:
   *           *
   *           *
    ***********
+```
 
 Se duplicaron los espacios de la izquierda y también se duplicó el ancho de la flecha (más asteriscos en las líneas horizontales). La forma es la misma, pero ahora mide el doble en alto y ancho.
 
 ##### Duplicar la flecha, colocando ambas una al lado de la otra
+
+```python
 print("    *" * 2)
 print("   * *" * 2)
 print("  *   *" * 2)
@@ -161,11 +172,13 @@ print("***   ***" * 2)
 print("  *   *" * 2)
 print("  *   *" * 2)
 print("  *****" * 2)
+```
 
 Multiplicar una cadena por 2 la repite dos veces. Así cada línea original se duplica, y el resultado son dos flechas completas, una al lado de la otra.
 
 Salida de la consola:
 
+```python
     *    *
    * *   * *
   *   *  *   *
@@ -174,35 +187,43 @@ Salida de la consola:
   *   *  *   *
   *   *  *   *
   *****  *****
+```
 
 ##### Eliminar una comilla
 
+```python
   File "c:\SENA\fundamentos_python\src\seccion1\lab3.py", line 35
     print("    *)
           ^
 SyntaxError: unterminated string literal (detected at line 35)
+```
 
 Falta la comilla de cierre. Python señala el error al final de la línea porque esperaba encontrar " pero la línea terminó. El error real está donde falta la comilla, pero Python lo detecta al llegar al final sin encontrarla.
 
 ##### Eliminar un paréntesis
+
+```python
   File "c:\SENA\fundamentos_python\src\seccion1\lab3.py", line 39
     print("***   ***"
          ^
 SyntaxError: '(' was never closed
+```
 
 Falta el paréntesis de cierre ). Python espero el paréntesis de cierre. El error está en la línea donde se abrio el paréntesis pero no se cerro.
 
 ##### Cambiar print a Print
-
+```python
   File "c:\SENA\fundamentos_python\src\seccion1\lab3.py", line 44, in <module>
     Print("    *")
     ^^^^^
 NameError: name 'Print' is not defined. Did you mean: 'print'?
+```
 
 Python distingue mayúsculas de minúsculas. La función correcta se escribe print todo en minúsculas. Al escribir Print, Python lo que hace es buscar una función o variable con ese nombre, no la encuentra y lanza el error.
 
 ##### Reemplazar comillas dobles por apóstrofes
 
+```python
 print('    *')
 print("   * *")
 print("  *   *")
@@ -211,10 +232,13 @@ print("***   ***")
 print("  *   *")
 print("  *   *")
 print("  *****")
+```
 
 Las comillas simples ' y las comillas dobles " son equivalentes en Python para crear cadenas. El cambio no produce error, siempre que abras y cierres con el mismo tipo.
 
 ##### Codigo incorrecto
+
+```python
 print("    *')
 print("   * *")
 print("  *   *")
@@ -223,10 +247,15 @@ print("***   ***")
 print("  *   *")
 print("  *   *")
 print("  *****")
+```
 
+Este seria el error que aparece en cosola:
+
+```python
   File "c:\SENA\fundamentos_python\src\seccion1\lab3.py", line 53
     print("    *')
           ^
 SyntaxError: unterminated string literal (detected at line 53)
+```
 
 Si se abre con " se tiene que cerrar con ". Mezclar los dos tipos hace que Python reconozca dónde termina la cadena.
